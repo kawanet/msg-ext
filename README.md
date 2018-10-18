@@ -1,13 +1,14 @@
-# msgpack ext type container
+# msg-ext - msgpack ext type container
 
-[![Build Status](https://travis-ci.org/kawanet/msg-ext.svg?branch=master)](https://travis-ci.org/kawanet/msg-ext) [![Coverage Status](https://coveralls.io/repos/github/kawanet/msg-ext/badge.svg)](https://coveralls.io/github/kawanet/msg-ext)
+[![npm version](https://badge.fury.io/js/msg-ext.svg)](http://badge.fury.io/js/msg-ext) [![Build Status](https://travis-ci.org/kawanet/msg-ext.svg?branch=master)](https://travis-ci.org/kawanet/msg-ext) [![Coverage Status](https://coveralls.io/repos/github/kawanet/msg-ext/badge.svg)](https://coveralls.io/github/kawanet/msg-ext)
 
 `MsgExt` is a base class for msgpack's ext formats.
 
 ### ES6
 
 ```js
-import {MsgExt, msgToBuffer} from "msg-ext";
+import {MsgExt} from "msg-ext";
+import {msgToBuffer} from "msg-interface";
 
 class MsgExtDate extends MsgExt {
   static from(date) {
@@ -32,9 +33,8 @@ const dt = msg.toDate(); // => 2018-01-02T03:04:05.000Z
 ### ES5
 
 ```js
-var MsgInterface = require("msg-ext");
-var MsgExt = MsgInterface.MsgExt;
-var msgToBuffer = MsgInterface.msgToBuffer;
+var MsgExt = require("msg-ext").MsgExt;
+var msgToBuffer = require("msg-interface").msgToBuffer;
 
 function MsgExtDate(payload) {
   MsgExt.call(this, payload);
@@ -63,6 +63,10 @@ var dt = msg.toDate(); // => 2018-01-02T03:04:05.000Z
 ### GitHub
 
 - [https://github.com/kawanet/msg-ext](https://github.com/kawanet/msg-ext)
+
+### See Also
+
+- [https://github.com/kawanet/msg-interface](https://github.com/kawanet/msg-interface)
 
 ### The MIT License (MIT)
 

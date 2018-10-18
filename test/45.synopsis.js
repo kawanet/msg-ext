@@ -2,8 +2,7 @@
 
 const assert = require("assert");
 const MsgExt = require("../").MsgExt;
-const MsgInterface = require("msg-interface");
-const msgToBuffer = MsgInterface.msgToBuffer;
+const msgToBuffer = require("msg-interface").msgToBuffer;
 
 const TITLE = __filename.split("/").pop();
 
