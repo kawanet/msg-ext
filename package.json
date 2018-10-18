@@ -1,13 +1,13 @@
 {
   "name": "msg-ext",
   "description": "msgpack ext type container",
-  "version": "0.1.1018",
+  "version": "1.0.0",
   "author": "@kawanet",
   "bugs": {
     "url": "https://github.com/kawanet/msg-ext/issues"
   },
   "dependencies": {
-    "msg-interface": "github:kawanet/msg-interface"
+    "msg-interface": "^1.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
@@ -45,7 +45,7 @@
     "jshint": "./node_modules/.bin/jshint .",
     "mocha": "./node_modules/.bin/mocha test/*.js",
     "test": "npm run jshint && npm run mocha",
-    "zuul-local": "./node_modules/.bin/zuul --local 4000 --ui mocha-bdd test/*.js"
+    "zuul-local": "./node_modules/.bin/zuul --open --local 4000 --ui mocha-bdd test/*.js"
   },
   "typings": "./msg-ext.d.ts"
 }
