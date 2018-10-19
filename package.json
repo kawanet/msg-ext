@@ -1,15 +1,16 @@
 {
   "name": "msg-ext",
   "description": "msgpack ext type container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "@kawanet",
   "bugs": {
     "url": "https://github.com/kawanet/msg-ext/issues"
   },
   "dependencies": {
-    "msg-interface": "^1.0.0"
+    "msg-interface": "^1.1.0"
   },
   "devDependencies": {
+    "@types/node": "^10.12.0",
     "coveralls": "^3.0.2",
     "jshint": "^2.9.6",
     "mocha": "^5.2.0",

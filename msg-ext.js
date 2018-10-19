@@ -1,7 +1,5 @@
 "use strict";
 
-var Msg = require("msg-interface").Msg;
-
 exports.MsgExt = MsgExt;
 
 /**
@@ -12,8 +10,6 @@ function MsgExt(payload, type) {
   if (!(this instanceof MsgExt)) {
     return new MsgExt(payload, type);
   }
-
-  Msg.call(this);
 
   if (!isNaN(payload) && Buffer.isBuffer(type)) {
     return MsgExt.call(this, type, +payload);
@@ -42,15 +38,13 @@ function MsgExt(payload, type) {
 }
 
 (function(P) {
-  MsgExt.prototype = P;
-
   P.type = void 0;
 
   P.buffer = void 0;
 
   P.writeMsgpackTo = writeMsgpackTo;
 
-})(Object.create(Msg.prototype));
+})(MsgExt.prototype);
 
 var fixedToken = [];
 fixedToken[1] = 0xd4;
